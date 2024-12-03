@@ -31,17 +31,7 @@ class WargaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return response()->json([
-            'meta' => [
-                'code' => 405,
-                'status' => 'error',
-                'message' => 'Method not allowed'
-            ],
-            'data' => [],
-        ], 405);
-    }
+
 
     /**
      * Store a newly created resource in storage.

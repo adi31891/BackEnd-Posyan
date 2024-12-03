@@ -20,12 +20,7 @@ return new class extends Migration
             $table->date('start_datetime');
             $table->date('end_datetime');
             $table->json('foto_event');
-            
-            // Remove these two lines
-            // $table->date('created_at');
-            // $table->date('updated_at');
-
-            // Keep this line to automatically add created_at and updated_at timestamps
+        
             $table->timestamps();
             
             $table->boolean('is_deleted');
