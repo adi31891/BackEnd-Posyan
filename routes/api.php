@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\WargaController;
 
 
 /*
@@ -19,6 +20,11 @@ use App\Http\Controllers\AuthController;
 
 
 Route::post('/sign-up', [AuthController::class, 'signUp']);
+Route::post('/sign-in', [AuthController::class, 'signIn']);
+
+
+Route::apiResource('warga', WargaController::class);
+
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

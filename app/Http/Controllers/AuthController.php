@@ -21,7 +21,7 @@ class AuthController extends Controller
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => bcrypt($validated['password']),
-            'picture' => env('AVATAR_GENERATOR_URL') . $validated['name'],
+            
         ]);
 
         $token = auth()->login($user);
@@ -48,7 +48,6 @@ class AuthController extends Controller
                 'user' =>[
                     'name' => $user->name,
                     'email' => $user->email,
-                    'picture' => $user->picture,
                 ],
                 'access token' => [
                     'token' => $token,
@@ -87,7 +86,6 @@ class AuthController extends Controller
                 'user' => [
                     'name' => $user->name,
                     'email' => $user->email,
-                    'picture' => $user->picture,
 
 
                 ],
@@ -130,7 +128,6 @@ class AuthController extends Controller
                 'user' => [
                     'name' => $user->name,
                     'email' => $user->email,
-                    'picture' => $user->picture,
                 ],
                 'access_token' => [
                     'token' => $token,
