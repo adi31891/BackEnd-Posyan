@@ -9,7 +9,7 @@ class warga extends Model
 {
     use HasFactory;
 
-    protected $table = 'warga'; // Specifies the correct table name
+    protected $table = 'warga'; 
 
     protected $fillable = [
         'no_kk',

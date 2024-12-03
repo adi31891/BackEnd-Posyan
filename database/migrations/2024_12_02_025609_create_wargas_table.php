@@ -21,15 +21,14 @@ return new class extends Migration
             $table->string('tempat_lahir', 50);
             $table->char('Jenis_Kelamin', 1);
             $table->date('tgl_lahir');
-            $table->integer('Anak_ke')->nullable(); // Make nullable if it's optional
-            $table->integer('relasi_keluarga_id')->nullable(); // Make nullable if it's optional
+            $table->integer('Anak_ke')->nullable(); 
+            $table->integer('relasi_keluarga_id')->nullable(); 
             $table->string('alamat', 255);
             $table->string('rt_alamat', 2);
             $table->string('no_telp_hp', 20);
-            $table->boolean('is_deleted')->default(false); // Default to false if not deleted
-            $table->boolean('is_meninggal')->default(false); // Default to false if not deceased
+            $table->boolean('is_deleted')->default(false); 
+            $table->boolean('is_meninggal')->default(false); 
             
-            // Automatically add created_at and updated_at timestamps
             $table->timestamps();
         });
     }
