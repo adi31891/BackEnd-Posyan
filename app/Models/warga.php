@@ -32,4 +32,5 @@ class warga extends Model
         'is_meninggal' => 'boolean',
         'tgl_lahir' => 'date',
     ];
+
 }

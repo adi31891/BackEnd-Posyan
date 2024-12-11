@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EventPosyanduController;
 use App\Http\Controllers\WargaController;
 
 
@@ -24,6 +25,8 @@ Route::post('/sign-in', [AuthController::class, 'signIn']);
 
 
 Route::apiResource('warga', WargaController::class);
+Route::apiResource('Kegiatan_Posyandu', EventPosyanduController::class);
+
 
 
 
